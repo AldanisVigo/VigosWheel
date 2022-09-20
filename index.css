@@ -44,11 +44,38 @@ body{
 
 #spinbutton{
     z-index: 1000;
+    width: 200px;
+    height: 50px;
+    background: red;
+    color: white;
+    border-radius: 40px;
+    animation: hover .5s linear 2s infinite alternate;
+}
+
+#spinbutton:hover{
+    cursor: pointer;
+    animation-play-state: paused;
+    font-weight: bold;
 }
 
 #landedon{
     font-weight: bold;
     font-size: x-large;
+}
+
+@keyframes hover{
+    0%{
+        transform: translateY(0px);
+        border: 1px solid black;
+    }
+    50%{
+        transform: translateY(10px);
+        border: 1px solid red;
+    }
+    100%{
+        transform: translateY(14px);
+        border: 1px solid orange;
+    }
 }
 
 @keyframes rotate{
