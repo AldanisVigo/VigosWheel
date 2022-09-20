@@ -33,11 +33,11 @@ for(let i = 0; i < numberOfPeople; i++){
     //create the number
     let num = document.createElement('div')
     num.style.position = 'absolute'
-    num.style.left = numToX - 20 + "px"
+    num.style.left = numToX - 11 + "px"
     num.style.top = numToY - 8 + "px"
     num.style.transform = `rotateY(${incrementAngleDeg}deg)`
     // num.innerText = i + 1// + ' ' + Number(incrementAngleDeg * i) + 'deg'
-    num.innerText = Number(incrementAngleDeg * i) + 'deg'
+    num.innerHTML = Number(incrementAngleDeg * i) + '&deg;'
     num.style.fontWeight = 'bolder'
     wheel.appendChild(num)
 }
@@ -50,18 +50,15 @@ const spinButton = document.querySelector('#spinbutton')
 const landedOn = document.querySelector('#landedon')
 let lastSpinVal = 0;
 spinButton.addEventListener('click',e=>{
-    console.log("Spin")
-    // wheel.style.animation = 'rotate 2s linear 2s infinite'
     let randomAngle = (Math.random() * 360 * 20) + 1
     lastSpinVal = randomAngle
-    console.log(`Rotating to: ${lastSpinVal}`)
     wheel.style.transform = `rotateZ(${lastSpinVal}deg)`
     while(lastSpinVal > 360){
         lastSpinVal -= 360
     }
     let finalAngle = 360 - lastSpinVal
     setTimeout(()=>{
-        landedOn.innerHTML = "Landed on " + finalAngle.toFixed(2) + ' degrees'
+        landedOn.innerHTML = `Landed on ${finalAngle.toFixed(2)}&deg;`
     },3000)
     console.log(`Rotating to: ${360 - lastSpinVal}`)
 })

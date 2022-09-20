@@ -6,12 +6,15 @@ body{
     /* transform-style: preserve-3d; */
     /* perspective : 200em; */
     text-align: center;
+    background: linear-gradient(to bottom, orange, red);
+    height: 100vh;
 }
 
 .wheelcontainer{
     display: flex;
     align-items: center;
     justify-content: center;
+    /* transform : rotateZ(-90deg); */
 }
 
 .wheelarrow{
@@ -37,6 +40,15 @@ body{
     text-align: center;
     border: 9px dashed green;
     transition: all 3s ease;
+}
+
+#spinbutton{
+    z-index: 1000;
+}
+
+#landedon{
+    font-weight: bold;
+    font-size: x-large;
 }
 
 @keyframes rotate{
