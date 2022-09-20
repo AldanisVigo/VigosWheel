@@ -1,0 +1,51 @@
+body{
+    color: black;
+    background: white;
+    padding: 100px;
+    margin: 0;
+    /* transform-style: preserve-3d; */
+    /* perspective : 200em; */
+    text-align: center;
+}
+
+.wheelcontainer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.wheelarrow{
+    width: 40px;
+    height: 50px;
+    background: red;
+    /* transform: translateY(50%); */
+    position: relative;
+    top: calc(50% - 25px);
+    clip-path: polygon(0 50%, 100% 100%, 100% 0);
+    z-index: -1;
+}
+
+.wheel{
+    color: black;
+    background: white; 
+    stroke:black; 
+    background: red;
+    border-radius: 100%;
+    width: 200px;
+    height: 200px;
+    animation-play-state: paused;
+    text-align: center;
+    border: 9px dashed green;
+}
+
+@keyframes rotate{
+    0% {
+        transform: rotateZ(0deg);
+    }
+    50% {
+        transform: rotateZ(180deg);
+    }
+    100% {
+        transform: rotateZ(360deg);
+    }
+}
