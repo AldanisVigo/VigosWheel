@@ -47,9 +47,6 @@ for(let i = 0; i < numberOfPeople; i++){
 
 console.log(drawingPath)
 
-//Move to starting point
-//Line To ending point
-
 wheelpath.setAttribute('d',drawingPath)
 
 const spinButton = document.querySelector('#spinbutton')
@@ -82,23 +79,16 @@ spinButton.addEventListener('click',e=>{
         }
 
         console.log('Rotate: ' + angle + 'deg');
-        // console.log(ranges[0])
-        // for(let i = 0; i <= 360; i += (360 / numberOfPeople)){
-            // if(i > angle){
-                // let landed = Number.parseFloat(i / (360 / numberOfPeople))
-                let landed;
-                for(let j = 0; j < numberOfPeople; j++){
-                    console.log(ranges.get(j))
-                    console.log(angle)
-                    if(angle < ranges.get(j)){
-                        landed = j
-                        break
-                    }
-                }
-                // console.log(landed)
-                landedOn.innerText = "Landed on " + Number(landed + 1)
-                // break;
-            // }
-        // }
+        let landed;
+        for(let j = 0; j < numberOfPeople; j++){
+            console.log(ranges.get(j))
+            console.log(angle)
+            if(angle < ranges.get(j)){
+                landed = j
+                break
+            }
+        }
+        landedOn.innerText = "Landed on " + Number(landed + 1)
+
     },randomTime)
 })
