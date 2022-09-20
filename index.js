@@ -8,11 +8,11 @@ const startingPoint = {
     y: 10
 }
 
-const numberOfPeople = 10;
+const numberOfSlices = 10;
 const lineLength = 100;
 const numberDistance = 136;
-let incrementAngle = 2 * Math.PI / numberOfPeople
-let incrementAngleDeg = 360 / numberOfPeople
+let incrementAngle = 2 * Math.PI / numberOfSlices
+let incrementAngleDeg = 360 / numberOfSlices
 wheel.style.position = 'relative'
 let drawingPath = ''
 let originOffset = {
@@ -20,7 +20,7 @@ let originOffset = {
     y : 100
 }
 
-for(let i = 0; i < numberOfPeople; i++){
+for(let i = 0; i < numberOfSlices; i++){
     drawingPath += `M ${originOffset.x},${originOffset.y}`
     let lineToX = Number.parseFloat((Math.cos(incrementAngle * i) * lineLength) + originOffset.x)
     let lineToY = Number.parseFloat((Math.sin(incrementAngle * i) * lineLength) + originOffset.y)
