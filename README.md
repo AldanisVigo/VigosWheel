@@ -1,1 +1,2 @@
-# VigosWheel
+# Vigos Spinner
+![VigosSpinner](vigosspinner.gif)
