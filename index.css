@@ -33,9 +33,10 @@ body{
     border-radius: 100%;
     width: 200px;
     height: 200px;
-    animation-play-state: paused;
+    /* animation-play-state: paused; */
     text-align: center;
     border: 9px dashed green;
+    transition: all 3s ease;
 }
 
 @keyframes rotate{
