@@ -59,5 +59,9 @@ spinButton.addEventListener('click',e=>{
     while(lastSpinVal > 360){
         lastSpinVal -= 360
     }
+    let finalAngle = 360 - lastSpinVal
+    setTimeout(()=>{
+        landedOn.innerHTML = "Landed on " + finalAngle.toFixed(2) + ' degrees'
+    },3000)
     console.log(`Rotating to: ${360 - lastSpinVal}`)
 })
